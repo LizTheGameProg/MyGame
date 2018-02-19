@@ -1,4 +1,5 @@
 #include "minecraftchess.h"
+#include "GameEngine/world.h"
 
 MinecraftChess::MinecraftChess(int argc, char** argv)
 	: BaseGame(argc, argv)
@@ -18,7 +19,7 @@ void MinecraftChess::OnInit()
 
 void MinecraftChess::OnLoad()
 {
-	
+	AccessWorld().AddEntity(&board);
 }
 
 void MinecraftChess::OnUpdate()
